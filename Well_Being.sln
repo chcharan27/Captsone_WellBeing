@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{CC3D9813-FE10-4D39-B6DA-BB29911C0726}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{848B767A-2417-4AA5-9C18-0AAD3CF3312C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{87D44DD4-A050-4E1B-B9E0-EC3CB4172C1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApi", "AuthApi\AuthApi.csproj", "{5B9BD5A1-CF7B-47DE-932F-05B07D8C6E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafetyAlertAPI", "SafetyAlertAPI\SafetyAlertAPI.csproj", "{878D6DC1-1224-47E6-A2EC-BD0AF882919D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindCareAPI", "MindCareAPI\MindCareAPI.csproj", "{37260A11-3F0D-4EF0-9153-C13BDF5BF72E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmergencyContactAPI", "EmergencyContactAPI\EmergencyContactAPI.csproj", "{CAB9B412-5817-4700-8214-8F21452F8D2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalAPI", "GlobalAPI\GlobalAPI.csproj", "{5EE6D7E5-7189-43DA-AFC5-4A93413990B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B9BD5A1-CF7B-47DE-932F-05B07D8C6E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9BD5A1-CF7B-47DE-932F-05B07D8C6E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9BD5A1-CF7B-47DE-932F-05B07D8C6E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9BD5A1-CF7B-47DE-932F-05B07D8C6E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{878D6DC1-1224-47E6-A2EC-BD0AF882919D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878D6DC1-1224-47E6-A2EC-BD0AF882919D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878D6DC1-1224-47E6-A2EC-BD0AF882919D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878D6DC1-1224-47E6-A2EC-BD0AF882919D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37260A11-3F0D-4EF0-9153-C13BDF5BF72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37260A11-3F0D-4EF0-9153-C13BDF5BF72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37260A11-3F0D-4EF0-9153-C13BDF5BF72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37260A11-3F0D-4EF0-9153-C13BDF5BF72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB9B412-5817-4700-8214-8F21452F8D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB9B412-5817-4700-8214-8F21452F8D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB9B412-5817-4700-8214-8F21452F8D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB9B412-5817-4700-8214-8F21452F8D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE6D7E5-7189-43DA-AFC5-4A93413990B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE6D7E5-7189-43DA-AFC5-4A93413990B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE6D7E5-7189-43DA-AFC5-4A93413990B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE6D7E5-7189-43DA-AFC5-4A93413990B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B9BD5A1-CF7B-47DE-932F-05B07D8C6E3D} = {87D44DD4-A050-4E1B-B9E0-EC3CB4172C1B}
+		{878D6DC1-1224-47E6-A2EC-BD0AF882919D} = {87D44DD4-A050-4E1B-B9E0-EC3CB4172C1B}
+		{37260A11-3F0D-4EF0-9153-C13BDF5BF72E} = {87D44DD4-A050-4E1B-B9E0-EC3CB4172C1B}
+		{CAB9B412-5817-4700-8214-8F21452F8D2B} = {87D44DD4-A050-4E1B-B9E0-EC3CB4172C1B}
+		{5EE6D7E5-7189-43DA-AFC5-4A93413990B6} = {87D44DD4-A050-4E1B-B9E0-EC3CB4172C1B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1BF2D2B-7505-4E4B-90CF-FE1DEBD722F6}
+	EndGlobalSection
+EndGlobal
