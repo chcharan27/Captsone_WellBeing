@@ -1,4 +1,3 @@
-
 using GlobalAPI.Services;
 
 namespace GlobalAPI
