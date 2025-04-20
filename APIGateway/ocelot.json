@@ -1,0 +1,89 @@
+{
+  "Routes": [
+    //Routing for Auth API
+    {
+      "UpstreamPathTemplate": "/api/Auth/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+
+      ],
+      "DownstreamPathTemplate": "/api/Auth/register"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5200
+        }
+
+      ],
+      "DownstreamPathTemplate": "/api/Auth/login"
+    },
+
+    //Routing for EmergencyContactAPI
+    {
+      "UpstreamPathTemplate": "/api/EmergencyContacts/",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5136
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmergencyContacts/"
+    },
+    //Routing for EmergencyContactAPI-{UserId}
+    {
+      "UpstreamPathTemplate": "/api/EmergencyContacts/{UserId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5136
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmergencyContacts/{UserId}"
+    },
+    //Routing for SafetyAPI
+    {
+      "UpstreamPathTemplate": "/api/Alert/",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5021
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Alert/"
+    },
+    //Routing for SafetyAPI{userId}
+    {
+      "UpstreamPathTemplate": "/api/Alert/history/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5021
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Alert/history/{userId}"
+    }
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5261"
+  }
+}
