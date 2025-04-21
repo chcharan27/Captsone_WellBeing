@@ -10,11 +10,10 @@ namespace APIGateway
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
-            builder.Services.AddOcelot(builder.Configuration).AddCacheManager(x =>
-            {
-                x.WithDictionaryHandle();
-            });
+            builder.Configuration.AddJsonFile("ocelot.json", optional: false,
+                reloadOnChange: true);
+
+            builder.Services.AddOcelot(builder.Configuration);
 
             var app = builder.Build();
 

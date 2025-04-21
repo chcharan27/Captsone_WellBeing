@@ -1,0 +1,107 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5009"
+  },
+  "Routes": [
+    //AuthAPI -port 5001
+
+    {
+      "UpstreamPathTemplate": "/gateway/auth/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/auth/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      }
+    },
+
+    {
+      "UpstreamPathTemplate": "/gateway/auth/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    //EmergencyContactAPI -port 5002
+
+    {
+      "UpstreamPathTemplate": "/gateway/emergencyContacts/",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/emergencyContacts/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/gateway/emergencyContacts/{UserId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/emergencyContacts/{UserId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    //safety alert api-port : 5003
+    {
+      "UpstreamPathTemplate": "/gateway/Alert/",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Alert/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/gateway/Alert/history/{userId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Alert/history/{userId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ]
+    },
+    //MindCareAPI -port 5004
+    {
+      "UpstreamPathTemplate": "/gateway/MindCare/history/{userId}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/MindCare/history/{userId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ]
+    }
+
+  ]
+}
+

@@ -9,12 +9,11 @@
     }
   },
   "profiles": {
-    "http": {
+    "EmergencyContactAPI": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5136",
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:5002",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

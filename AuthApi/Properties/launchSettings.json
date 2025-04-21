@@ -9,12 +9,11 @@
     }
   },
   "profiles": {
-    "http": {
+    "AuthApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5200",
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
