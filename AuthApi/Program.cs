@@ -40,6 +40,26 @@ namespace AuthApi
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
+            builder.Services.AddCors(options =>
+
+
+
+            {
+
+                options.AddPolicy("AllowAngularApp", policy =>
+
+                {
+
+                    policy.WithOrigins("http://localhost:64089")
+
+                      .AllowAnyHeader()
+
+                      .AllowAnyMethod();
+
+                });
+
+            });
+
 
 
 
@@ -50,6 +70,7 @@ namespace AuthApi
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.UseCors("AllowAngularApp");
             }
 
             app.UseHttpsRedirection();

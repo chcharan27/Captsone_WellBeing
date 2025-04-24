@@ -26,19 +26,22 @@ namespace AuthApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            if (string.IsNullOrWhiteSpace(registerDto.Username) || string.IsNullOrWhiteSpace(registerDto.Password))
+            if (string.IsNullOrWhiteSpace(registerDto.Email) || string.IsNullOrWhiteSpace(registerDto.Password))
                 return BadRequest("Username and Password are required.");
 
-            var existingUser = await _authRepository.GetUserByUsernameAsync(registerDto.Username);
+            var existingUser = await _authRepository.GetUserByUsernameAsync(registerDto.Email);
             if (existingUser != null)
                 return BadRequest("Username already exists.");
 
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(registerDto.Password);
 
             var newUser = new User
-            {
-                Username = registerDto.Username,
-                Password = hashedPassword
+            {   
+                Name= registerDto.Name,
+                Email = registerDto.Email,
+                Password = hashedPassword,
+                Phone=registerDto.Phone,
+
             };
 
             await _authRepository.AddUserAsync(newUser);
@@ -60,7 +63,7 @@ namespace AuthApi.Controllers
         {
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Name, user.Email),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
                 // You can add roles or other claims here if needed
             };

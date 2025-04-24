@@ -15,7 +15,7 @@ namespace AuthApi.Repository
 
         public async Task<User> GetUserByUsernameAsync(string username)
         {
-            return await _context.Users.SingleOrDefaultAsync(u => u.Username == username);
+            return await _context.Users.SingleOrDefaultAsync(u => u.Email == username);
         }
 
         public async Task AddUserAsync(User user)
