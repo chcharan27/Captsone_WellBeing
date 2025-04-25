@@ -59,6 +59,17 @@ namespace AuthApi.Controllers
 
             return Ok(new { token });
         }
+        // GET: api/auth/{id}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUserById(int id)
+        {
+            var user = await _authRepository.GetUserByIdAsync(id);
+            if (user == null)
+                return NotFound("User not found.");
+
+            return Ok(user);
+        }
+
         private string GenerateJwtToken(User user)
         {
             var claims = new[]
